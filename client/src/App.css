@@ -14,7 +14,7 @@ body {
 
 #root {
   height: 100vh;
-  background-image: url("./assets/images/background.webp");
+  background-color: #111;
   background-size: cover;
   background-position: top;
   display: grid;
@@ -31,6 +31,9 @@ header {
 
 .logo {
   font-size: larger;
+  font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+  color: #f23005;
 }
 
 .navbar {
