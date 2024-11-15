@@ -1,0 +1,32 @@
+.pseudo {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.pseudo > img {
+  border-radius: 50%;
+  width: 3rem;
+  display: block;
+  margin: auto;
+}
+
+.pseudo > p {
+  color: var(--textColorWhite);
+  font-family: var(--textFont);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .pseudo {
+    grid-area: 1 / 3 / 3 / 4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: .5rem;
+  }
+  .pseudo > img {
+    width: 4rem;
+  }
+  .pseudo > p {
+    padding-top: 0.5rem;
+  }
+}

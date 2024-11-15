@@ -1,0 +1,19 @@
+section.background-image {
+  background-color: var(--bgColor);
+}
+section.background-image img {
+  width: 100%;
+}
+section.background-image h1 {
+  position: absolute;
+  margin: 30% 0 0 10%;
+  font-size: 5rem;
+  color: var(--textColorWhite);
+  font-family: var(--titleFont);
+}
+
+@media (max-width: 768px) {
+  section.background-image h1 {
+    font-size: 2rem;
+  }
+}

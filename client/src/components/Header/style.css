@@ -1,0 +1,18 @@
+header {
+  max-height: 20rem;
+  background-color: var(--bgColor);
+  width: 100%;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    max-height: 12rem;
+    grid-template-columns: 1fr, 2fr, 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,17 @@
+footer {
+  background-color: var(--bgColor);
+  color: var(--textColorWhite);
+  font-family: var(--textFont);
+  text-align: center;
+  padding: 1rem;
+}
+
+a {
+  color: var(--textColorWhite);
+  text-decoration: none;
+}
+.logo {
+  font-family: var(--titleFont);
+  color: var(--titleColor);
+  text-transform: uppercase;
+}

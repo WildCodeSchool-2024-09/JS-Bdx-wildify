@@ -11,6 +11,7 @@ create table item (
   foreign key(user_id) references user(id)
 );
 
+
 insert into user(id, email, password)
 values
   (1, "jdoe@mail.com", "123456");
