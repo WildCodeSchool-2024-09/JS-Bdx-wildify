@@ -1,0 +1,43 @@
+nav.playlists-section {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  background-color: var(--bgRedColor);
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: var(--textFont);
+  font-weight: bold;
+}
+
+.component-image {
+  border-radius: 8px;
+  width: 60%;
+}
+
+.component-item:hover {
+  text-decoration: underline;
+}
+
+.component-item {
+  color: var(--textColorWhite);
+  font-family: var(--textFont);
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav.playlists-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+  }
+
+  .component-image {
+    width: 100%;
+  }
+}

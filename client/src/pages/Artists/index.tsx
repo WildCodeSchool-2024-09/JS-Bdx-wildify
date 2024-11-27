@@ -1,19 +1,18 @@
 import { useEffect } from "react";
-import "../../App.css";
 import SectionItems from "../../components/Section/SectionItems";
-import GetPlaylists from "../../components/displayBlocks/MyPlaylistSearch";
-import ImageBlockHome from "../../components/imageBlock/imageBlockHome";
+import ArtistSearch from "../../components/displayBlocks/MyArtistsSearch";
+import ImageBlockArtists from "../../components/imageBlock/imageBlockArtists";
 
-export default function Home() {
+export default function Artists() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const listLinks = [
     {
-      title: "Artists",
-      href: "/artists",
-      imgSrc: "./src/assets/images/artistes.jpg",
+      title: "Playlists",
+      href: "/",
+      imgSrc: "./src/assets/images/playlist.jpg",
     },
     {
       title: "Podcasts",
@@ -22,10 +21,10 @@ export default function Home() {
     },
   ];
   return (
-    <main>
-      <ImageBlockHome />
-      <GetPlaylists />
+    <>
+      <ImageBlockArtists />
+      <ArtistSearch />
       <SectionItems listLinkItems={listLinks} />
-    </main>
+    </>
   );
 }

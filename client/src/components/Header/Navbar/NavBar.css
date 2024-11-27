@@ -6,6 +6,9 @@ nav {
   padding: 0.5rem;
   grid-area: 1 / 3 / 2 / 4;
 }
+nav li a:hover {
+  text-decoration: underline;
+}
 
 .logo-link {
   font-family: var(--titleFont);
@@ -44,10 +47,11 @@ nav#top ul {
   background-color: var(--bgColor);
 }
 
-.show-nav {
+#top ul.show-nav {
   right: 0vw;
   width: 100vw;
   visibility: visible;
+  z-index: 100;
 }
 
 .navbar-burger {

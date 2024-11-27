@@ -8,7 +8,11 @@
 
 :root {
   --bgColor: #0d0d0d;
+  --bgColorDarkRed: #7f1000;
+  --bgColorWhite: #f2f2f2;
   --titleColor: #ed0000;
+  --titleColorDark: #f23005;
+  --bgRedColor: #7f1000;
   --textColorWhite: #fffef8;
   --titleFont: "Bagel Fat One";
   --textFont: "Open sans", sans-serif;

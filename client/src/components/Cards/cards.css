@@ -1,0 +1,114 @@
+.profilePicture {
+  width: 7rem;
+  border-radius: 50%;
+  transform: translate(8.5rem, 2rem);
+}
+main p {
+  font-family: var(--textFont), sans-serif;
+}
+.name {
+  transform: translate(-2.5rem, -4rem);
+  font-size: 1.2rem;
+  font-family: var(--titleFont), sans-serif;
+}
+.firstname {
+  transform: translate(-2.5rem, -3rem);
+  font-size: 1.2rem;
+  font-family: var(--titleFont), sans-serif;
+}
+.profile {
+  width: 276px;
+  border-radius: 10px;
+  margin: 0.3rem;
+  padding-right: 4rem;
+  background-color: var(--bgColor);
+}
+.h2card {
+  font-family: var(--titleFont), sans-serif;
+  font-size: "1.5rem";
+  transform: translatex(1rem);
+  margin-top: 1rem;
+}
+.biocard {
+  transform: translatex(2rem);
+  max-width: 25ch;
+  text-align: left;
+  color: var(--bgColor);
+}
+.ulcard {
+  transform: translatex(3rem);
+  list-style-type: none;
+}
+ul.ulcard li {
+  display: flex;
+  flex-direction: row;
+}
+
+li.music a {
+  color: var(--bgColor);
+  max-width: 25ch;
+  text-decoration: none;
+}
+li.music a:hover {
+  color: var(--titleColor);
+  transform: scale(1.1);
+  transition: ease 0.2s;
+}
+.photobackground {
+  background-color: var(--bgColor);
+  display: grid;
+  justify-content: center;
+}
+.card {
+  width: 285px;
+  border-radius: 10px;
+  margin: 1rem;
+  color: var(--bgColor);
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: var(--textColorWhite);
+}
+.red {
+  color: var(--titleColor);
+  font: var(--titleFont);
+}
+li.p {
+  color: var(--bgColor);
+}
+.h3card {
+  color: var(--bgColor);
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: 52rem;
+    height: 21rem;
+    padding: 0.5rem;
+    padding-top: 0.6rem;
+    margin-bottom: 3rem;
+  }
+  .name {
+    transform: translate(2rem, 2.5rem);
+  }
+  .firstname {
+    transform: translate(2rem, 4rem);
+  }
+  .profilePicture {
+    width: 10rem;
+    transform: translate(2rem, 2rem);
+  }
+  .profile {
+    transform: translatex(-rem);
+    height: 19rem;
+    width: 14rem;
+  }
+  .biocard {
+    max-width: 60ch;
+  }
+  li.music a {
+    max-width: 40ch;
+  }
+}

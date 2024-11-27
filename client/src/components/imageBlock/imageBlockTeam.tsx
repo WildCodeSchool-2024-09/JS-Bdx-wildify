@@ -1,11 +1,11 @@
 import "./style.css";
 
-export default function ImageBlockConcerts() {
+export default function ImageBlockTeam() {
   return (
     <section className="background-image">
-      <h1>Mes Concerts</h1>
+      <h1>L'équipe</h1>
       <img
-        src="../../../src/assets/background-images/concert.jpg"
+        src="../../../src/assets/background-images/team.jpg"
         alt="background-image"
       />
     </section>

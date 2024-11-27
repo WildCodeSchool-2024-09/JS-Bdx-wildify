@@ -12,10 +12,17 @@ article.blocks ul li {
   width: 100%;
   text-align: center;
 }
+
+article.blocks ul li.mrgn-bottom {
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+}
 article.blocks ul li img {
   width: 80%;
-  height: 80%;
   border-radius: 1rem;
+  aspect-ratio: 1 / 1;
 }
 
 article.blocks ul li a {

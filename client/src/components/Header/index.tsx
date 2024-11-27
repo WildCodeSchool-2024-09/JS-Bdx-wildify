@@ -1,7 +1,7 @@
-import "./style.css";
+import "./Header.css";
 import { useState } from "react";
 import Navbar from "./Navbar";
-import Pseudo from "./Pseudo";
+import PseudoDisplay from "./PseudoDisplay/PseudoDisplay";
 import Searchbar from "./Searchbar";
 
 function Header() {
@@ -10,7 +10,7 @@ function Header() {
   return (
     <header>
       <Navbar showLinks={showLinks} setShowLinks={setShowLinks} />
-      <Pseudo />
+      <PseudoDisplay />
       <Searchbar />
     </header>
   );

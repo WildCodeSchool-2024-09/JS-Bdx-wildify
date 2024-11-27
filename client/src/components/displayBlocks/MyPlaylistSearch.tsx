@@ -1,27 +1,20 @@
 import { useEffect, useState } from "react";
+import { fetchData } from "../../Utils/fetchUtils";
 import MyBlocks from "./MyBlocks";
-
-type PlaylistItem = {
-  id: number;
-  name: string;
-  external_urls: {
-    spotify: string;
-  };
-  images: {
-    url: string;
-  }[];
-};
+import type { DisplayItem } from "./types";
 
 export default function GetPlaylists() {
-  const [userPlaylists, setUserPlaylists] = useState<PlaylistItem[]>([]);
+  const [userPlaylists, setUserPlaylists] = useState<DisplayItem[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/userPlaylists`)
-      .then((response) => response.json())
-      .then((data) => setUserPlaylists(data.items))
-      .catch((error) =>
-        console.error("Erreur lors de la récupération des données :", error),
-      );
+    const fetchPlaylists = async () => {
+      const data = await fetchData<{ items: DisplayItem[] }>("/me/playlists");
+      if (data) {
+        setUserPlaylists(data.items);
+      }
+    };
+
+    fetchPlaylists();
   }, []);
 
   return <MyBlocks items={userPlaylists} />;

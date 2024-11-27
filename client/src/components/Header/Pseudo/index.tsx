@@ -1,12 +1,26 @@
-import "./style.css";
+import "./Pseudo.css";
 
-function Pseudo() {
-  return (
-    <aside className="pseudo">
-      <img src="../src/assets/images/avatar.png" alt="profile_picture" />
-      <p>Jane Doe</p>
-    </aside>
-  );
+export interface PseudoProps {
+  display_name: string;
+  image: string;
 }
 
-export default Pseudo;
+interface PseudoComponentProps {
+  pseudoData: PseudoProps | null;
+}
+
+export default function Pseudo({ pseudoData }: PseudoComponentProps) {
+  return pseudoData ? (
+    <figure className="pseudo">
+      <img
+        src={pseudoData.image}
+        alt="profile_picture"
+        height={64}
+        width={64}
+      />
+      <figcaption>{pseudoData.display_name}</figcaption>
+    </figure>
+  ) : (
+    <p>Loading...</p>
+  );
+}

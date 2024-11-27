@@ -23,7 +23,6 @@ import cors from "cors";
 if (process.env.CLIENT_URL != null) {
   app.use(cors({ origin: [process.env.CLIENT_URL] }));
 }
-
 // If you need to allow extra origins, you can add something like this:
 
 /*

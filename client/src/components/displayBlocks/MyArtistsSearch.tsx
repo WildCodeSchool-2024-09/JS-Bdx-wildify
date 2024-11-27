@@ -1,25 +1,20 @@
 import { useEffect, useState } from "react";
+import { fetchData } from "../../Utils/fetchUtils";
 import MyBlocks from "./MyBlocks";
-
-type ArtistItem = {
-  id: number;
-  name: string;
-  external_urls: {
-    spotify: string;
-  };
-  images: {
-    url: string;
-  }[];
-};
+import type { DisplayItem } from "./types";
 
 export default function ArtistSearch() {
-  const [userArtists, setUserArtists] = useState<ArtistItem[]>([]);
+  const [userArtists, setUserArtists] = useState<DisplayItem[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/userArtists`)
-      .then((response) => response.json())
-      .then((data) => setUserArtists(data.items))
-      .catch((error) => console.error("Error fetching data:", error));
+    const fetchArtists = async () => {
+      const data = await fetchData<{ items: DisplayItem[] }>("/me/top/artists");
+      if (data?.items) {
+        setUserArtists(data.items);
+      }
+    };
+
+    fetchArtists();
   }, []);
 
   return <MyBlocks items={userArtists} />;

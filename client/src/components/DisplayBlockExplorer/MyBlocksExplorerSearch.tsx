@@ -1,17 +1,17 @@
-import "./DisplayBlocks.css";
-import type { DisplayItem } from "./types";
+import "../displayBlocks/DisplayBlocks.css";
+import type { DisplayItem } from "../DisplayBlockExplorer/MyExplorerSearch";
 
 type MyBlocksProps = {
   items: DisplayItem[];
 };
 
-export default function MyBlocks({ items }: MyBlocksProps) {
+export default function ExplorerSearch({ items }: MyBlocksProps) {
   return (
     <article className="blocks">
       <ul>
         {items && items.length > 0 ? (
-          items.slice(0, 4).map((item) => (
-            <li key={item.id}>
+          items.slice(0, 8).map((item) => (
+            <li key={item.id} className="mrgn-bottom">
               <a
                 href={item.external_urls.spotify}
                 target="_blank"

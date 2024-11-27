@@ -6,9 +6,12 @@ footer {
   padding: 1rem;
 }
 
-a {
+footer a {
   color: var(--textColorWhite);
   text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 .logo {
   font-family: var(--titleFont);
