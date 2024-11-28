@@ -17,8 +17,8 @@ main p {
   font-family: var(--titleFont), sans-serif;
 }
 .profile {
-  width: 276px;
-  border-radius: 10px;
+  width: 17.25rem;
+  border-radius: 0.625rem;
   margin: 0.3rem;
   padding-right: 4rem;
   background-color: var(--bgColor);
@@ -32,7 +32,7 @@ main p {
 .biocard {
   transform: translatex(2rem);
   max-width: 25ch;
-  text-align: left;
+  text-align: start;
   color: var(--bgColor);
 }
 .ulcard {
@@ -60,11 +60,9 @@ li.music a:hover {
   justify-content: center;
 }
 .card {
-  width: 285px;
-  border-radius: 10px;
-  margin: 1rem;
+  width: 17.8rem;
+  border-radius: 0.625rem;
   color: var(--bgColor);
-  margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   padding-bottom: 1.5rem;
   background-color: var(--textColorWhite);
@@ -88,7 +86,6 @@ li.p {
     height: 21rem;
     padding: 0.5rem;
     padding-top: 0.6rem;
-    margin-bottom: 3rem;
   }
   .name {
     transform: translate(2rem, 2.5rem);
@@ -101,7 +98,6 @@ li.p {
     transform: translate(2rem, 2rem);
   }
   .profile {
-    transform: translatex(-rem);
     height: 19rem;
     width: 14rem;
   }

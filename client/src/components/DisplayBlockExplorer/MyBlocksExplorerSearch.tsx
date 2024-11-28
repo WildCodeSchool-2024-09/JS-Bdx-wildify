@@ -6,11 +6,12 @@ type MyBlocksProps = {
 };
 
 export default function ExplorerSearch({ items }: MyBlocksProps) {
+  const MAX_ITEMS_EXPLORER_DISPLAYED = 8;
   return (
     <article className="blocks">
       <ul>
         {items && items.length > 0 ? (
-          items.slice(0, 8).map((item) => (
+          items.slice(0, MAX_ITEMS_EXPLORER_DISPLAYED).map((item) => (
             <li key={item.id} className="mrgn-bottom">
               <a
                 href={item.external_urls.spotify}

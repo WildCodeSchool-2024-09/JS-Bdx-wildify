@@ -14,11 +14,12 @@ interface Props {
 }
 
 export default function DisplayAlbums({ albums }: Props) {
+  const MAX_ALBUMS_DISPLAYED = 8;
   return albums && albums.length > 0 ? (
     <section className="albums-section">
       <h2 className="section-title">Albums</h2>
       <ul className="albums-list">
-        {albums.slice(0, 8).map((album) => (
+        {albums.slice(0, MAX_ALBUMS_DISPLAYED).map((album) => (
           <li key={album.id} className="album-item">
             {album.images?.[0] && (
               <img
